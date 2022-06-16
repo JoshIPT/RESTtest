@@ -201,5 +201,23 @@ namespace RESTtest
                 }
             }
         }
+
+        private void addToPOSTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem itm = (ListViewItem)listView1.SelectedItems[0];
+                listView2.Items.Add(itm);
+            }
+        }
+
+        private void addToGETToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView2.SelectedItems.Count > 0)
+            {
+                ListViewItem itm = (ListViewItem)listView2.SelectedItems[0];
+                listView1.Items.Add(itm);
+            }
+        }
     }
 }
